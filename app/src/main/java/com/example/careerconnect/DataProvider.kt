@@ -34,7 +34,18 @@ object DataProvider {
         name = "John Doe",
         headline = "Senior Software Engineer at TechCorp Inc.",
         about = "Passionate software engineer with 6+ years of experience building scalable web applications.",
-        skills = listOf("JavaScript", "React", "Node.js", "TypeScript", "AWS", "Docker"),
+        mission = "To push boundaries, solve the unsolvable, and brighten the world with code.",
+        skills = listOf(
+            "JavaScript",
+            "React",
+            "Node.js",
+            "TypeScript",
+            "AWS",
+            "Docker",
+            "Ideas Dynamo",
+            "Deadline Ninja",
+            "Team Whisperer"
+        ),
         preferences = "Remote • $120k–$160k • Full-time",
         experience = listOf(
             Experience(
@@ -47,6 +58,11 @@ object DataProvider {
                 companyLine = "StartupXYZ • 2020–2022 • New York, NY",
                 desc = "Built end‑to‑end web applications using modern JavaScript frameworks and cloud technologies."
             )
+        ),
+        achievements = listOf(
+            "Invented a productivity system so efficient it's practically a time machine",
+            "Voted 'Most Likely to Save the Day' five years running",
+            "Launched products with a 100% success rate (if imagination counts)"
         )
     )
 }
