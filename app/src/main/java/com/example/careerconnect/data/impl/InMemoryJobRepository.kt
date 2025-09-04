@@ -1,3 +1,5 @@
+package com.example.careerconnect.data.impl
+
 import com.example.careerconnect.Job
 import com.example.careerconnect.data.JobRepository
 
