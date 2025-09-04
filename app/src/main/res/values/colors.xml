@@ -1,0 +1,7 @@
+<resources>
+    <color name="cc_primary">#0A66C2</color>
+    <color name="cc_on_primary">#FFFFFF</color>
+    <color name="cc_background">#F3F2EF</color>
+    <color name="cc_surface">#FFFFFF</color>
+    <color name="cc_text_primary">#1F2937</color>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CareerConnect</string>
+    <string name="connect_grow">Connect &amp; Grow</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="search_jobs">Search Jobs</string>
+    <string name="trending_jobs_for_you">Trending Jobs for You</string>
+    <string name="career_tips_amp_insights"><![CDATA[Career Tips & Insights]]></string>
+    <string name="profile">Profile</string>
+    <string name="uprofile">UProfile</string>
+    <string name="Profile" />
+    <string name="john_doe">John Doe</string>
+    <string name="senior_software_engineer_at_techcorp_inc">Senior Software Engineer at TechCorp Inc.</string>
+    <string name="passionate_software_engineer_with_6_years_of_experience_building_scalable_web_applications">Passionate software engineer with 6+ years of experience building scalable web applications.</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="skills">Skills</string>
+    <string name="professional_experience">Professional Experience</string>
+    <string name="job_preferences">Job Preferences</string>
+    <string name="remote_120k_160k_full_time">Remote • $120k–$160k • Full-time</string>
+    <string name="logout">Logout</string>
+</resources>
