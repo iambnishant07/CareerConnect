@@ -5,7 +5,11 @@ data class Job(
     val company: String,
     val location: String,
     val summary: String,
-    val tags: List<String>
+    val tags: List<String>,
+    val posted: String = "",
+    val salary: String = "",
+    val applicants: String = "",
+    val urgent: Boolean = false
 )
 
 data class Tip(val title: String, val meta: String)

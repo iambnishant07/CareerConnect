@@ -14,6 +14,11 @@
     <string name="search_jobs">Search Jobs</string>
     <string name="trending_jobs_for_you">Trending Jobs for You</string>
     <string name="career_tips_amp_insights"><![CDATA[Career Tips & Insights]]></string>
+    <string name="home_heading">Find Your Next Opportunity</string>
+    <string name="home_subheading">Discover jobs that match your skills and aspirations</string>
+    <string name="search_job_placeholder">Job title, keywords, or company</string>
+    <string name="search_location_placeholder">City, state, or remote</string>
+    <string name="view_all">View All</string>
     <string name="profile">Profile</string>
     <string name="uprofile">UProfile</string>
     <string name="Profile" />

@@ -5,9 +5,26 @@ import com.example.careerconnect.data.JobRepository
 
 class InMemoryJobRepository : JobRepository {
     override fun getJobs(): List<Job> = listOf(
-        Job("Senior Frontend Developer","TechCorp","San Francisco, CA",
-            "Looking for an experienced React developer…", listOf("React","TypeScript")),
-        Job("Product Manager","StartupXYZ","Remote",
-            "Drive innovation and UX across teams…", listOf("Strategy","Agile"))
+        Job(
+            title = "Senior Frontend Developer",
+            company = "TechCorp",
+            location = "San Francisco, CA",
+            summary = "Looking for an experienced React developer…",
+            tags = listOf("React", "TypeScript"),
+            posted = "2h ago",
+            salary = "\$120k - \$160k",
+            applicants = "24 applicants",
+            urgent = true
+        ),
+        Job(
+            title = "Product Manager",
+            company = "StartupXYZ",
+            location = "Remote",
+            summary = "Drive innovation and UX across teams…",
+            tags = listOf("Strategy", "Agile"),
+            posted = "1d ago",
+            salary = "\$100k - \$130k",
+            applicants = "50 applicants"
+        )
     )
 }

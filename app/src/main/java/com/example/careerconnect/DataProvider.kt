@@ -7,14 +7,21 @@ object DataProvider {
             company = "TechCorp",
             location = "San Francisco, CA",
             summary = "Looking for an experienced React developer to join our growing team...",
-            tags = listOf("React", "TypeScript", "Next.js")
+            tags = listOf("React", "TypeScript", "Next.js"),
+            posted = "2h ago",
+            salary = "\$120k - \$160k",
+            applicants = "24 applicants",
+            urgent = true
         ),
         Job(
             title = "Product Manager",
             company = "StartupXYZ",
             location = "Remote",
             summary = "Drive innovation and user experience across cross‑functional teams...",
-            tags = listOf("Strategy", "Agile", "Analytics")
+            tags = listOf("Strategy", "Agile", "Analytics"),
+            posted = "1d ago",
+            salary = "\$100k - \$130k",
+            applicants = "50 applicants"
         )
     )
 

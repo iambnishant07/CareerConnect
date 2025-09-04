@@ -12,10 +12,12 @@ import com.google.android.material.chip.Chip
 class JobAdapter(private val items: List<Job>) : RecyclerView.Adapter<JobAdapter.VH>() {
     class VH(v: View) : RecyclerView.ViewHolder(v) {
         val title: TextView = v.findViewById(R.id.tvTitle)
+        val urgent: TextView = v.findViewById(R.id.tvUrgent)
         val meta: TextView = v.findViewById(R.id.tvMeta)
         val summary: TextView = v.findViewById(R.id.tvSummary)
         val chip1: Chip = v.findViewById(R.id.chip1)
         val chip2: Chip = v.findViewById(R.id.chip2)
+        val extras: TextView = v.findViewById(R.id.tvExtras)
         val btnSave: MaterialButton = v.findViewById(R.id.btnSave)
         val btnApply: MaterialButton = v.findViewById(R.id.btnApply)
     }
@@ -28,10 +30,12 @@ class JobAdapter(private val items: List<Job>) : RecyclerView.Adapter<JobAdapter
     override fun onBindViewHolder(h: VH, position: Int) {
         val item = items[position]
         h.title.text = item.title
-        h.meta.text = "${item.company} • ${item.location}"
+        h.meta.text = "${item.company} • ${item.location} • ${item.posted}"
         h.summary.text = item.summary
         h.chip1.text = item.tags.getOrNull(0) ?: ""
         h.chip2.text = item.tags.getOrNull(1) ?: ""
+        h.extras.text = "${item.salary} • ${item.applicants}"
+        h.urgent.visibility = if (item.urgent) View.VISIBLE else View.GONE
         h.btnSave.setOnClickListener { Toast.makeText(it.context, "Saved", Toast.LENGTH_SHORT).show() }
         h.btnApply.setOnClickListener { Toast.makeText(it.context, "Apply clicked", Toast.LENGTH_SHORT).show() }
     }
