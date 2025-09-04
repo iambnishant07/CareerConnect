@@ -1,6 +1,6 @@
 package com.example.careerconnect.data
 
-import InMemoryJobRepository
+import com.example.careerconnect.data.impl.InMemoryJobRepository
 import com.example.careerconnect.data.impl.InMemoryTipRepository
 
 object RepositoryProvider {
