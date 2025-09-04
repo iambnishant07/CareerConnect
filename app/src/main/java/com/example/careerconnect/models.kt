@@ -20,7 +20,9 @@ data class Profile(
     val name: String,
     val headline: String,
     val about: String,
+    val mission: String,
     val skills: List<String>,
     val preferences: String,
-    val experience: List<Experience>
+    val experience: List<Experience>,
+    val achievements: List<String>
 )

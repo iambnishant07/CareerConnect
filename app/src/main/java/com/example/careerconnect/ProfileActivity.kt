@@ -1,6 +1,7 @@
 package com.example.careerconnect
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.careerconnect.databinding.ActivityProfileBinding
@@ -22,6 +23,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.tvName.text = p.name
         binding.tvHeadline.text = p.headline
         binding.tvAbout.text = p.about
+        binding.tvMission.text = p.mission
         binding.tvPrefs.text = p.preferences
 
         p.skills.forEach { skill ->
@@ -32,6 +34,12 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.rvExperience.layoutManager = LinearLayoutManager(this)
         binding.rvExperience.adapter = ExperienceAdapter(p.experience)
+
+        p.achievements.forEach { achievement ->
+            val tv = TextView(this)
+            tv.text = "• $achievement"
+            binding.llAchievements.addView(tv)
+        }
     }
 
     // Handle back arrow press
