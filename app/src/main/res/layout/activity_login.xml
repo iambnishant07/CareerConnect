@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Brand -->
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="72dp"
@@ -30,7 +29,14 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-        <!-- Card with form -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="2dp"
+            android:text="@string/app_tagline"
+            android:textColor="#6B7280" />
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +53,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Welcome back"
+                    android:text="@string/welcome_back"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -55,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="12dp"
-                    android:text="Sign in to advance your career"
+                    android:text="@string/sign_in_message"
                     android:textColor="#6B7280" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -65,9 +71,9 @@
                         android:id="@+id/etEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:autofillHints="emailAddress"
                         android:hint="@string/email"
-                        android:inputType="textEmailAddress"
-                        android:autofillHints="emailAddress"/>
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -82,28 +88,6 @@
                         android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <CheckBox
-                        android:id="@+id/chkRememberMe"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Remember me" />
-
-                    <TextView
-                        android:id="@+id/tvForgot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Forgot password?"
-                        android:textColor="@color/cc_primary"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
@@ -112,63 +96,116 @@
                     android:text="@string/connect_grow"
                     app:backgroundTint="@color/cc_primary" />
 
-                <!-- Divider -->
+                <TextView
+                    android:id="@+id/tvForgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/cc_primary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="#E5E7EB" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/baseline_person_24"
+                        android:tint="@color/cc_primary" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="8dp"
-                        android:text="OR" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="#E5E7EB" />
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/connect_with_professionals"
+                        android:textColor="@color/cc_text_primary"
+                        android:textSize="12sp" />
                 </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                <!-- Social buttons -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnGoogleLogin"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:icon="@drawable/ic_google_logo"
-                    app:iconPadding="8dp"
-                    android:text="Continue with Google" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLinkedInLogin"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_work_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/find_dream_job"
+                        android:textColor="@color/cc_text_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:icon="@drawable/ic_linkedin_logo"
-                    app:iconPadding="8dp"
-                    android:text="Continue with LinkedIn" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-        <!-- Footer -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="Your professional journey starts here 🚀" />
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_trending_up_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="@string/advance_career"
+                        android:textColor="@color/cc_text_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
